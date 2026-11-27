@@ -1,0 +1,563 @@
+/* ==============================
+   MAIN WEBSITE
+   ============================== */
+
+body {
+    background: radial-gradient(circle at top, #ffffff, #f5f7fa 60%, #e8edf5);
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    padding-top: 80px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    transition: background 0.4s ease, color 0.4s ease;
+}
+
+
+/* ==============================
+   HEADINGS & TEXT
+   ============================== */
+
+h1 {
+    color: #333;
+    font-size: 40px;
+    margin: 0 0 20px 0;
+    animation: slideIn 1s ease-out;
+}
+
+h2 {
+    color: #777;
+    font-size: 18px;
+    margin: 0 0 10px 0;
+}
+
+h3 {
+    color: #333;
+    font-size: 24px;
+    margin: 35px 0 15px 0;
+}
+
+p {
+    color: #666;
+    font-size: 18px;
+    max-width: 600px;
+    margin: 0 0 15px 0;
+}
+
+
+/* ==============================
+   NAVIGATION
+   ============================== */
+
+nav {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+
+    display: flex;
+    gap: 10px;
+
+    background-color: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(10px);
+
+    padding: 10px 15px;
+    border-radius: 30px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+nav a:hover {
+    color: #777;
+}
+
+
+/* ==============================
+   HERO SECTION
+   ============================== */
+
+.hero {
+    padding: 40px 20px;
+    text-align: center;
+    animation: heroAppear 1s ease-out;
+}
+
+.hero-small {
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.hero h1 {
+    font-size: 60px;
+    margin: 0 0 15px 0;
+    text-shadow: 0 0 20px rgba(51, 51, 51, 0.25);
+}
+
+.hero-text {
+    font-size: 21px;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.hero-button {
+    display: inline-block;
+    padding: 14px 25px;
+
+    background-color: #333;
+    color: white;
+
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+
+    transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+}
+
+.hero-button:hover {
+    transform: translateY(-6px) scale(1.05);
+    background-color: #555;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+/* ==============================
+   AVATAR
+   ============================== */
+
+.avatar {
+    width: 100px;
+    height: 100px;
+
+    margin: 0 auto 20px auto;
+
+    border-radius: 50%;
+
+    background-color: #333;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 2px;
+
+    box-shadow: 0 0 25px rgba(51, 51, 51, 0.35);
+
+    transition: transform 0.3s ease;
+
+    animation: avatarPulse 2.5s ease-in-out infinite;
+}
+
+.avatar:hover {
+    transform: scale(1.08) rotate(3deg);
+}
+
+
+/* ==============================
+   SKILLS
+   ============================== */
+
+.skills {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    margin-top: 25px;
+    margin-bottom: 30px;
+}
+
+.skill {
+    background-color: white;
+
+    padding: 15px 20px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+
+    font-size: 16px;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+/* ==============================
+   PROJECTS
+   ============================== */
+
+.projects {
+    display: flex;
+    gap: 20px;
+
+    justify-content: center;
+    flex-wrap: wrap;
+
+    margin-top: 25px;
+    margin-bottom: 50px;
+}
+
+.project {
+    background-color: white;
+
+    width: 250px;
+    padding: 20px;
+
+    border-radius: 12px;
+
+    border: 1px solid #e5e7eb;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.project a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.project h4 {
+    color: #333;
+    font-size: 19px;
+    margin-top: 0;
+}
+
+.project p {
+    font-size: 15px;
+    color: #666;
+}
+
+
+/* ==============================
+   PROJECT PAGES
+   ============================== */
+
+.project-page h1 {
+    font-size: 45px;
+    margin-bottom: 5px;
+}
+
+.project-page .intro {
+    margin-bottom: 25px;
+}
+
+.back-link {
+    display: inline-block;
+
+    margin-top: 20px;
+    padding: 12px 20px;
+
+    background-color: #333;
+    color: white;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+    font-weight: bold;
+
+    transition: transform 0.3s ease;
+}
+
+.back-link:hover {
+    transform: translateY(-3px);
+}
+
+
+/* ==============================
+   CONTACT FORM
+   ============================== */
+
+#contact {
+    margin-top: 40px;
+
+    padding: 30px;
+
+    background-color: white;
+
+    border-radius: 12px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+
+    max-width: 500px;
+}
+
+#contact h3 {
+    margin-top: 0;
+}
+
+#contact p {
+    margin-bottom: 20px;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+
+    margin-top: 20px;
+}
+
+#contact input,
+#contact textarea {
+    padding: 12px;
+
+    border: 1px solid #ddd;
+    border-radius: 8px;
+
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#contact textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+#contact form button {
+    margin-top: 5px;
+}
+
+
+/* ==============================
+   BUTTONS
+   ============================== */
+
+button {
+    background-color: #333;
+    color: white;
+
+    padding: 14px 30px;
+
+    border: none;
+    border-radius: 8px;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    transition: transform 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+
+/* ==============================
+   THEME BUTTON
+   ============================== */
+
+#themeToggle {
+    position: fixed;
+
+    top: 20px;
+    right: 20px;
+
+    z-index: 1001;
+
+    padding: 10px 14px;
+
+    border-radius: 50%;
+
+    font-size: 18px;
+
+    background-color: #333;
+    color: white;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+
+/* ==============================
+   FOOTER
+   ============================== */
+
+footer {
+    margin-top: 40px;
+    padding: 15px;
+
+    color: #777;
+    font-size: 14px;
+}
+
+
+/* ==============================
+   ANIMATIONS
+   ============================== */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes heroAppear {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes avatarPulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+
+/* ==============================
+   DARK MODE
+   ============================== */
+
+body.dark-mode {
+    background: #121212;
+    color: white;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4 {
+    color: white;
+}
+
+body.dark-mode p {
+    color: #ccc;
+}
+
+body.dark-mode nav,
+body.dark-mode .project,
+body.dark-mode .skill,
+body.dark-mode #contact {
+    background-color: #1e1e1e;
+}
+
+body.dark-mode nav a {
+    color: white;
+}
+
+body.dark-mode .project p,
+body.dark-mode .skill {
+    color: #ddd;
+}
+
+body.dark-mode #themeToggle {
+    background-color: white;
+    color: #121212;
+}
+
+body.dark-mode .project {
+    border-color: #333;
+}
+
+body.dark-mode .hero-small {
+    color: #aaa;
+}
+
+
+/* ==============================
+   MOBILE
+   ============================== */
+
+@media (max-width: 600px) {
+
+    nav {
+        width: 90%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    #themeToggle {
+        top: 75px;
+        right: 15px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero-text {
+        font-size: 18px;
+    }
+
+    .projects {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project {
+        width: 80%;
+    }
+
+    #contact {
+        width: 80%;
+    }
+}
